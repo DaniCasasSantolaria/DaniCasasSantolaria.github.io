@@ -115,7 +115,7 @@ const projectsJson = JSON.stringify(
                 </p>
 
                 <div class="flex flex-wrap gap-1.5">
-                  {project.tags.map((tag) => (
+                  {(project.tags ?? []).map((tag) => (
                     <span class="tag">{tag}</span>
                   ))}
                 </div>
@@ -325,7 +325,7 @@ const projectsJson = JSON.stringify(
     modalDesc.textContent = p.description;
 
     modalTags.innerHTML = '';
-    for (const t of p.tags) {
+    for (for (const t of p.tags ?? [])) {
       const span = document.createElement('span');
       span.className = 'tag';
       span.textContent = t;

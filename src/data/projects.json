@@ -1,64 +1,49 @@
 [
   {
-    "title": "Open Source Portfolio Template",
-    "featured": true,
-    "resume": true,
-    "company": "Community",
-    "category": "devops",
-    "description": "The template you're looking at right now. Built with Astro, fully data-driven, and designed to be claimed by anyone. Fork it, fill it, ship it. All placeholder content is waiting for yours.",
-    "tags": ["Astro", "TypeScript", "Tailwind CSS", "Open Source", "Template"],
-    "icon": "command-line",
-    "sliderImage": "/images/projects/use-astro.jpg",
-    "sliderOrder": 1,
-    "backgroundImage": "/images/projects/use-astro.jpg",
-    "link": "",
-    "colorIcon": "/images/icons/materialdesign/github.svg",
-    "githubRepo": "portfolio-template"
+    "title": "Game Engines",
+    "skills": [
+      { "name": "Unreal Engine", "logo": "/images/icons/devicons/unrealengine-original.svg" },
+      { "name": "Unity", "logo": "/images/icons/devicons/unity-original.svg" }
+    ]
   },
   {
-    "title": "3D Environment Study",
-    "featured": true,
-    "resume": true,
-    "company": "Personal Work",
-    "category": "infrastructure",
-    "description": "A series of Blender scenes exploring lighting, texture, and atmosphere — no narrative, just craft. Rendered in Cycles, post-processed in Photoshop, shared as a study in patience and iteration.",
-    "tags": ["Blender", "3D Modeling", "Lighting", "Cycles Render", "Photoshop"],
-    "icon": "cpu-chip",
-    "sliderImage": "/images/projects/blender-mockup.jpg",
-    "sliderOrder": 2,
-    "backgroundImage": "/images/projects/blender-mockup.jpg",
-    "link": "",
-    "colorIcon": "/images/icons/materialdesign/cube-outline.svg",
-    "githubRepo": ""
+    "title": "Gameplay Programming",
+    "skills": [
+      { "name": "C++", "logo": "/images/icons/devicons/cplusplus-original.svg" },
+      { "name": "C#", "logo": "/images/icons/devicons/csharp-original.svg" },
+      { "name": "Blueprints", "logo": "/images/icons/devicons/unrealengine-original.svg" },
+      { "name": "Game Systems", "logo": "/images/icons/devicons/unrealengine-original.svg" }
+    ]
   },
   {
-    "title": "Personal Design System",
-    "featured": true,
-    "company": "Side Project",
-    "category": "security",
-    "description": "A living component library built for personal and freelance use. Design tokens, reusable components, and documentation that travel from project to project — no starting from scratch every time.",
-    "tags": ["Figma", "CSS", "TypeScript", "Design Systems", "Component Library"],
-    "icon": "document-text",
-    "sliderImage": "/images/projects/design-library.jpg",
-    "sliderOrder": 4,
-    "backgroundImage": "/images/projects/design-library.jpg",
-    "link": "",
-    "colorIcon": "/images/icons/materialdesign/palette-outline.svg",
-    "githubRepo": "design-system"
+    "title": "Game Design & Prototyping",
+    "skills": [
+      { "name": "Game Mechanics", "logo": "/images/icons/devicons/unrealengine-original.svg" },
+      { "name": "Level Design", "logo": "/images/icons/devicons/unrealengine-original.svg" },
+      { "name": "Puzzle Design", "logo": "/images/icons/devicons/unrealengine-original.svg" },
+      { "name": "Player Experience", "logo": "/images/icons/devicons/unrealengine-original.svg" }
+    ]
   },
   {
-    "title": "Photography Workflow App",
-    "resume": true,
-    "company": "Side Project",
-    "category": "web",
-    "description": "A lightweight local web app for managing shoot intake, selects, and client delivery — replacing a patchwork of folders, spreadsheets, and emails with a single tool built for the way I work.",
-    "tags": ["React", "SQLite", "Photography", "Workflow", "Node.js"],
-    "icon": "eye",
-    "sliderImage": "/images/projects/web-app.jpg",
-    "sliderOrder": 3,
-    "backgroundImage": "/images/projects/web-app.jpg",
-    "link": "",
-    "colorIcon": "/images/icons/materialdesign/camera-outline.svg",
-    "githubRepo": "photo-workflow"
+    "title": "3D & Creative Tools",
+    "skills": [
+      { "name": "Photoshop", "logo": "/images/icons/devicons/photoshop-original.svg" }
+    ]
+  },
+  {
+    "title": "Web & Interactive",
+    "skills": [
+      { "name": "JavaScript", "logo": "/images/icons/devicons/javascript-original.svg" },
+      { "name": "Astro", "logo": "/images/icons/devicons/astro-original.svg" }
+    ]
+  },
+  {
+    "title": "Dev & Workflow Tools",
+    "skills": [
+      { "name": "Git", "logo": "/images/icons/devicons/git-original-wordmark.svg" },
+      { "name": "GitHub", "logo": "/images/icons/devicons/github-original.svg" },
+      { "name": "Visual Studio", "logo": "/images/icons/devicons/visualstudio-original.svg" },
+      { "name": "VS Code", "logo": "/images/icons/devicons/vscode-original.svg" }
+    ]
   }
 ]
