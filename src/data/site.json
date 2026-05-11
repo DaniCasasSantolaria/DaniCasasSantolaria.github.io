@@ -1,9 +1,9 @@
 {
-  "title": "Daniel Casas Santolaria | Junior Game Developer Portfolio",
-  "description": "Portfolio of Daniel Casas Santolaria, a junior game developer in Barcelona focused on gameplay programming, systems, and interactive prototypes.",
+  "title": "Daniel Casas Santolaria | Game Development Portfolio",
+  "description": "Portfolio of Daniel Casas Santolaria, a game development student in Barcelona focused on gameplay programming, systems, and interactive prototypes.",
   "ogSiteName": "Daniel Casas Santolaria Portfolio",
   "shortName": "Daniel Casas",
-  "tagline": "Gameplay programming | Interactive systems | Junior game developer",
+  "tagline": "Gameplay programming | Interactive systems | Game development student",
   "themeStorageKey": "portfolio-theme",
   "web3formsKey": "",
   "footerAttribution": {
@@ -18,7 +18,7 @@
     "Daniel Casas Portfolio",
     "Dani Casas Santolaria",
     "Game Developer",
-    "Junior Game Developer",
+    "Game Development Student",
     "Gameplay Programmer",
     "Gameplay Programming",
     "Game Systems",
@@ -34,7 +34,7 @@
     "Level Design",
     "Game Mechanics",
     "Open to Work",
-    "Junior Game Jobs"
+    "Student Game Projects"
   ],
   "navExternal": [
     {
@@ -59,33 +59,15 @@
       "iconBg": "rgba(16, 185, 129, 0.1)",
       "iconBorder": "rgba(16, 185, 129, 0.2)",
       "iconType": "web",
-      "name": "Carvet",
-      "url": "https://danicasassantolaria.github.io",
-      "description": "A personal 3D puzzle-platformer concept centered on exploration, atmosphere, and gameplay logic.",
+      "name": "Carved",
+      "url": "https://illoturbio19.itch.io/carved",
+      "description": "A group 3D puzzle-platformer project centered on exploration, atmosphere, and gameplay logic.",
       "features": [
         "3D Puzzle-Platforming",
         "Gameplay Systems",
         "Atmospheric Exploration"
       ],
-      "ctaText": "View Project"
-    },
-    {
-      "badge": "Profile",
-      "badgeColor": "#38bdf8",
-      "cardAccent": "#38bdf8",
-      "glowColor": "rgba(56, 189, 248, 0.14)",
-      "iconBg": "rgba(56, 189, 248, 0.1)",
-      "iconBorder": "rgba(56, 189, 248, 0.2)",
-      "iconType": "web",
-      "name": "LinkedIn",
-      "url": "https://www.linkedin.com/in/daniel-casas-santolaria-5576982b3/",
-      "description": "Professional profile for junior game development opportunities, academic background, and updates.",
-      "features": [
-        "Open to Junior Roles",
-        "Barcelona Based",
-        "Game Development Profile"
-      ],
-      "ctaText": "Open LinkedIn"
+      "ctaText": "Play on itch.io"
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "name": "Daniel Casas Santolaria",
-  "title": "Junior Game Developer",
-  "photo": "/images/personal/portrait.png",
-  "photoAlt": "Portrait of Daniel Casas Santolaria",
-  "email": "",
+  "title": "Game Development Student",
+  "photo": "/images/personal/daniel-casas-photo.jpg",
+  "photoAlt": "Photo of Daniel Casas Santolaria",
+  "email": "danicasas2295@gmail.com",
   "phone": "",
   "phoneTel": "",
   "location": "Barcelona, Catalonia, Spain",
@@ -24,13 +24,13 @@
   "reddit": "",
   "signal": "",
   "blog": "",
-  "cv": "",
-  "education": "Universitat de Barcelona / ENTI - Video Game Development, 2023-2026",
+  "cv": "/documents/DanielCasasSantolaria_CV.pdf",
+  "education": "Universitat de Barcelona / ENTI - Video Game Development, 2023-2027",
   "yearsExperience": "0-1",
   "volunteer": "",
   "portfolioUrl": "https://danicasassantolaria.github.io",
   "heroRole": "Gameplay Programmer & Game Developer",
   "heroSocialLinks": ["github", "linkedin"],
-  "bio": "Game development student based in Barcelona, focused on gameplay programming, interactive systems, and player-first prototypes. Open to junior opportunities in the games industry.",
-  "aboutLong": "I am a junior game developer studying at Universitat de Barcelona / ENTI, where I work on playable prototypes, team projects, and practical game design exercises. My focus is the intersection between gameplay code, systems thinking, and readable player feedback: mechanics that are clear, responsive, and fun to iterate on. I am especially interested in gameplay programming, level and puzzle logic, rapid prototyping, and collaborative development with artists and designers."
+  "bio": "Game development student based in Barcelona, focused on gameplay programming, interactive systems, and player-first prototypes.",
+  "aboutLong": "I am studying video game development at Universitat de Barcelona / ENTI, where I work on playable prototypes, team projects, and practical game design exercises. My focus is the intersection between gameplay code, systems thinking, and readable player feedback: mechanics that are clear, responsive, and fun to iterate on. I am especially interested in gameplay programming, level and puzzle logic, rapid prototyping, and collaborative development with artists and designers."
 }

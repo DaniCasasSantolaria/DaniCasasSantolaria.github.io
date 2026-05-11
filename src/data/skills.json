@@ -2,28 +2,18 @@
   {
     "title": "Game Development",
     "skills": [
-      { "name": "Unity", "logo": "/images/icons/devicons/typescript-original.svg" },
-      { "name": "Unreal Engine", "logo": "/images/icons/devicons/javascript-original.svg" },
-      { "name": "Gameplay Prototyping", "logo": "/images/icons/devicons/typescript-original.svg" },
-      { "name": "Level Design", "logo": "/images/icons/devicons/figma-original.svg" }
+      { "name": "Unity", "logo": "/images/icons/devicons/unity-original.svg" },
+      { "name": "Unreal Engine", "logo": "/images/icons/devicons/unrealengine-original.svg" },
+      { "name": "Gameplay Prototyping", "logo": "/images/icons/materialdesign/cube-outline.svg" },
+      { "name": "Level Design", "logo": "/images/icons/materialdesign/palette-outline.svg" }
     ]
   },
   {
-    "title": "Programming",
+    "title": "Programming Languages",
     "skills": [
-      { "name": "C#", "logo": "/images/icons/devicons/typescript-original.svg" },
-      { "name": "C++", "logo": "/images/icons/devicons/javascript-original.svg" },
-      { "name": "JavaScript", "logo": "/images/icons/devicons/javascript-original.svg" },
-      { "name": "TypeScript", "logo": "/images/icons/devicons/typescript-original.svg" }
-    ]
-  },
-  {
-    "title": "Web & Tools",
-    "skills": [
-      { "name": "HTML5", "logo": "/images/icons/devicons/html5-original.svg" },
-      { "name": "CSS3", "logo": "/images/icons/devicons/css3-original.svg" },
-      { "name": "React", "logo": "/images/icons/devicons/react-original.svg" },
-      { "name": "Astro", "logo": "/images/icons/devicons/javascript-original.svg" }
+      { "name": "C#", "logo": "/images/icons/devicons/csharp-original.svg" },
+      { "name": "C++", "logo": "/images/icons/devicons/cplusplus-original.svg" },
+      { "name": "JavaScript", "logo": "/images/icons/devicons/javascript-original.svg" }
     ]
   },
   {
@@ -31,8 +21,7 @@
     "skills": [
       { "name": "Blender", "logo": "/images/icons/devicons/blender-original.svg" },
       { "name": "Photoshop", "logo": "/images/icons/devicons/photoshop-original.svg" },
-      { "name": "Premiere Pro", "logo": "/images/icons/devicons/premierepro-plain.svg" },
-      { "name": "Figma", "logo": "/images/icons/devicons/figma-original.svg" }
+      { "name": "Premiere Pro", "logo": "/images/icons/devicons/premierepro-plain.svg" }
     ]
   },
   {
@@ -40,16 +29,8 @@
     "skills": [
       { "name": "Git", "logo": "/images/icons/devicons/git-original-wordmark.svg" },
       { "name": "GitHub", "logo": "/images/icons/devicons/github-original.svg" },
-      { "name": "Markdown", "logo": "/images/icons/devicons/markdown-original.svg" },
-      { "name": "Team Projects", "logo": "/images/icons/devicons/github-original.svg" }
-    ]
-  },
-  {
-    "title": "Languages",
-    "skills": [
-      { "name": "Spanish", "logo": "/images/icons/devicons/markdown-original.svg" },
-      { "name": "Catalan", "logo": "/images/icons/devicons/markdown-original.svg" },
-      { "name": "English", "logo": "/images/icons/devicons/markdown-original.svg" }
+      { "name": "Visual Studio", "logo": "/images/icons/devicons/visualstudio-original.svg" },
+      { "name": "VS Code", "logo": "/images/icons/devicons/vscode-original.svg" }
     ]
   }
 ]

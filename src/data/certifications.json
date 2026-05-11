@@ -1,29 +1,11 @@
 [
   {
-    "name": "Video Game Development Studies",
+    "name": "Studying Video Game Development",
     "issuer": "Universitat de Barcelona / ENTI",
-    "date": "2023 - 2026",
+    "date": "2023 - 2027",
     "status": "In Progress",
     "type": "in-progress",
-    "description": "Ongoing university training focused on game development, programming, design, production, and collaborative student projects.",
+    "description": "Currently studying video game development, with coursework focused on programming, game design, production, and collaborative student projects.",
     "credentialUrl": ""
-  },
-  {
-    "name": "Gameplay Programming Practice",
-    "issuer": "Personal and academic projects",
-    "date": "Current",
-    "status": "In Progress",
-    "type": "in-progress",
-    "description": "Continuous practice building mechanics, interactive prototypes, puzzle logic, player feedback, and game systems.",
-    "credentialUrl": ""
-  },
-  {
-    "name": "Junior Game Talent Profile",
-    "issuer": "ENTI game development network",
-    "date": "2026",
-    "status": "Active",
-    "type": "professional-development",
-    "description": "Public junior profile aligned with game development opportunities in Barcelona, with emphasis on self-made projects and team-based learning.",
-    "credentialUrl": "https://www.linkedin.com/in/daniel-casas-santolaria-5576982b3/"
   }
 ]

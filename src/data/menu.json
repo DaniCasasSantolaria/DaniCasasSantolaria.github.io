@@ -19,34 +19,16 @@
       "desc": "Tools, languages, and production workflow"
     },
     {
-      "label": "Portfolio",
-      "shortLabel": "Portfolio",
-      "href": "#portfolio",
-      "desc": "Project breakdowns and visual material"
-    },
-    {
       "label": "Projects",
       "shortLabel": "Projects",
       "href": "#projects",
-      "desc": "Playable work, prototypes, and portfolio projects"
+      "desc": "Featured playable game project"
     },
     {
       "label": "Education",
       "shortLabel": "Education",
       "href": "#certifications",
       "desc": "Studies and active learning"
-    },
-    {
-      "label": "Links",
-      "shortLabel": "Links",
-      "href": "#services",
-      "desc": "Project and professional profile links"
-    },
-    {
-      "label": "Contact",
-      "shortLabel": "Contact",
-      "href": "#contact",
-      "desc": "Reach out for opportunities or collaboration"
     }
   ]
 }

@@ -2,21 +2,25 @@
   {
     "key": "gameplay",
     "title": "Gameplay Programming",
-    "description": "Implementing mechanics, interactions, controls, and game loops with a focus on responsiveness, clarity, and iteration."
+    "description": "Implementing mechanics, interactions, controls, and game loops with a focus on responsiveness, clarity, and iteration.",
+    "icon": "code-bracket-square"
   },
   {
     "key": "systems",
     "title": "Game Systems & Prototyping",
-    "description": "Turning design ideas into playable prototypes, testing rules quickly, and refining systems through feedback."
+    "description": "Turning design ideas into playable prototypes, testing rules quickly, and refining systems through feedback.",
+    "icon": "cog-6-tooth"
   },
   {
     "key": "level-design",
     "title": "Level & Puzzle Logic",
-    "description": "Building spaces, objectives, and constraints that guide the player while leaving room for discovery and experimentation."
+    "description": "Building spaces, objectives, and constraints that guide the player while leaving room for discovery and experimentation.",
+    "icon": "map"
   },
   {
     "key": "teamwork",
     "title": "Collaborative Game Development",
-    "description": "Working in multidisciplinary student teams, communicating clearly, and adapting features around art, design, and production needs."
+    "description": "Learning in multidisciplinary student teams, communicating clearly, and adapting features around art, design, and production needs.",
+    "icon": "users"
   }
 ]

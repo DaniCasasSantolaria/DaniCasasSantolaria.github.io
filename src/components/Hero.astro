@@ -13,8 +13,12 @@ import { icons } from '../lib/icons';
 import { withBase } from '../lib/assetPath';
 
 const augmented = await augmentProjectsWithImages(projectsData as ProjectEntry[]);
-// Only projects with a GitHub-fetched preview image appear in the hero slider.
-const featuredProjects = augmented.filter((p) => p.featuredImage);
+const featuredProjects = augmented
+  .map((p) => ({
+    ...p,
+    featuredImage: p.featuredImage ?? p.sliderImage ?? p.backgroundImage,
+  }))
+  .filter((p) => p.featuredImage);
 // Split "Frontend & Backend" so the "&" can be styled with a different colour in the template.
 const heroParts = personalData.heroRole.split(' & ');
 ---
@@ -82,7 +86,7 @@ const heroParts = personalData.heroRole.split(' & ');
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 reveal" style="transition-delay: 0.3s;">
-          <a href="#contact" class="btn-primary text-center">Get In Touch</a>
+          <a href="#projects" class="btn-primary text-center">View Carved</a>
           {personalData.cv ? (
             <a
               href={personalData.cv}
@@ -119,8 +123,8 @@ const heroParts = personalData.heroRole.split(' & ');
             alt={personalData.photoAlt ?? ''}
             class="portrait-peek-img"
             loading="lazy"
-            width="280"
-            height="350"
+            width="160"
+            height="160"
           />
         </div>
       </div>
@@ -753,15 +757,15 @@ const heroParts = personalData.heroRole.split(' & ');
   .portrait-peek-wrapper {
     display: none;
     position: absolute;
-    right: -25px;
-    top: -4.5%;
+    right: -0.5rem;
+    top: -1rem;
     pointer-events: none;
   }
 
   .portrait-peek-wrapper {
     display: block;
     z-index: 2;
-    right: -4rem;
+    right: -0.5rem;
   }
   .portrait-peek-img {
     animation: none;
@@ -769,8 +773,13 @@ const heroParts = personalData.heroRole.split(' & ');
 
   .portrait-peek-img {
     display: block;
-    width: 280px;
-    height: auto;
+    width: 8.5rem;
+    height: 8.5rem;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 18px 45px rgba(2, 6, 23, 0.4);
     transform: translateY(0);
     animation-delay: 5s;
   }
@@ -780,19 +789,18 @@ const heroParts = personalData.heroRole.split(' & ');
       width: 125%;
     }
     .portrait-peek-img {
-      transform: scale(0.8);
+      transform: scale(0.9);
     }
     .portrait-peek-wrapper {
-      right: calc(-25% + -25px);
+      right: -0.5rem;
     }
   }
   @media (min-width: 1024px) and (max-width: 1279px) {
     .portrait-peek-img {
       top: -8.5%;
       right: -70px;
-      transform: translateY(0) scale(0.58);
+      transform: translateY(0) scale(0.9);
       animation-delay: 1s;
-      animation: portrait-peek-mobile-horizontal 20s ease-in-out infinite;
     }
     .portrait-peek-wrapper {
       z-index: 1;
@@ -801,34 +809,31 @@ const heroParts = personalData.heroRole.split(' & ');
 
   @media (min-width: 501px) and (max-width: 1023px) {
     .portrait-peek-img {
-      transform: scale(0.7);
+      transform: scale(0.85);
     }
     .portrait-peek-wrapper {
-      top: -10%;
-      right: -25px;
-      transform: scaleX(-1);
+      top: -1rem;
+      right: 0;
     }
   }
 
   @media (min-width: 440px) and (max-width: 500px) {
     .portrait-peek-wrapper {
-      top: -8.5%;
-      right: -15%;
-      transform: scaleX(-1);
+      top: -0.5rem;
+      right: 0;
     }
     .portrait-peek-img {
-      transform: scale(0.5);
+      transform: scale(0.78);
     }
   }
 
   @media (min-width: 400px) and (max-width: 439px) {
     .portrait-peek-wrapper {
-      top: -8.5%;
-      right: -25%;
-      transform: scaleX(-1);
+      top: -0.5rem;
+      right: 0;
     }
     .portrait-peek-img {
-      transform: scale(0.45);
+      transform: scale(0.72);
     }
   }
 
