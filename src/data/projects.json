@@ -19,5 +19,19 @@
     "link": "https://illoturbio19.itch.io/carved",
     "colorIcon": "/images/icons/materialdesign/cube-outline.svg",
     "githubRepo": ""
+  },
+  {
+    "title": "SDL Arcade games",
+    "featured": true,
+    "resume": true,
+    "company": "GitHub Project",
+    "category": "systems",
+    "description": "A software engineering project with arcade-style games built around SDL, focused on C++ fundamentals, structure, and interactive gameplay loops.",
+    "tags": ["SDL", "C++", "Arcade Games"],
+    "icon": "code-bracket-square",
+    "sliderOrder": 2,
+    "link": "https://github.com/DaniCasasSantolaria/EnginyeriaDelSoftware_AA2_SDL",
+    "colorIcon": "/images/icons/devicons/cplusplus-original.svg",
+    "githubRepo": "DaniCasasSantolaria/EnginyeriaDelSoftware_AA2_SDL"
   }
 ]

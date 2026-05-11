@@ -1,8 +1,7 @@
 ---
 import projectsData from '../data/projects.json';
 import { withBase } from '../lib/assetPath';
-
-const project = projectsData[0];
+import { icons } from '../lib/icons';
 ---
 
 <section id="projects" class="projects-section">
@@ -12,67 +11,96 @@ const project = projectsData[0];
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Projects</h2>
     </div>
 
-    {
-      project && (
-        <article class="project-feature reveal visible">
-          <div class="project-art">
-            <img id="project-main-image" src={withBase(project.backgroundImage)} alt={`${project.title} screenshot`} loading="lazy" width="900" height="560" />
-            <div class="project-art-overlay" />
-            <div class="project-shots">
-              {project.images?.slice(0, 3).map((image, i) => (
-                <button
-                  type="button"
-                  class={`project-shot-button ${image === project.backgroundImage ? 'active' : ''}`}
-                  data-image={withBase(image)}
-                  aria-label={`Show ${project.title} screenshot ${i + 1}`}
-                >
-                  <img src={withBase(image)} alt="" loading="lazy" width="160" height="90" />
-                </button>
-              ))}
-            </div>
-          </div>
+    <div class="projects-list">
+      {
+        projectsData.map((project, index) => {
+          const hasImages = Boolean(project.backgroundImage && project.images?.length);
+          const ctaLabel = project.link.includes('github.com') ? 'View on GitHub' : 'Play on itch.io';
 
-          <div class="project-copy">
-            <p class="project-eyebrow">{project.company}</p>
-            <h3>{project.title}</h3>
-            <p class="project-description">{project.description}</p>
+          return (
+            <article class={`project-feature reveal visible ${hasImages ? '' : 'project-feature--compact'}`}>
+              <div class="project-art">
+                {hasImages ? (
+                  <>
+                    <img
+                      class="project-main-image"
+                      src={withBase(project.backgroundImage)}
+                      alt={`${project.title} screenshot`}
+                      loading="lazy"
+                      width="900"
+                      height="560"
+                    />
+                    <div class="project-art-overlay" />
+                    <div class="project-shots">
+                      {project.images?.slice(0, 3).map((image, i) => (
+                        <button
+                          type="button"
+                          class={`project-shot-button ${image === project.backgroundImage ? 'active' : ''}`}
+                          data-gallery={String(index)}
+                          data-image={withBase(image)}
+                          aria-label={`Show ${project.title} screenshot ${i + 1}`}
+                        >
+                          <img src={withBase(image)} alt="" loading="lazy" width="160" height="90" />
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <div class="project-code-art" aria-hidden="true">
+                    <div class="project-code-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" set:html={icons[project.icon] ?? icons['code-bracket-square']} />
+                    </div>
+                    <span>SDL</span>
+                    <span>C++</span>
+                    <span>Arcade Loop</span>
+                  </div>
+                )}
+              </div>
 
-            <div class="project-tags">
-              {project.tags.map((tag) => (
-                <span>{tag}</span>
-              ))}
-            </div>
+              <div class="project-copy">
+                <p class="project-eyebrow">{project.company}</p>
+                <h3>{project.title}</h3>
+                <p class="project-description">{project.description}</p>
 
-            <a href={project.link} target="_blank" rel="noopener" class="project-link">
-              Play on itch.io
-              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path
-                  d="M3 10h14M10 3l7 7-7 7"
-                  stroke="currentColor"
-                  stroke-width="1.75"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
-        </article>
-      )
-    }
+                <div class="project-tags">
+                  {project.tags.map((tag) => (
+                    <span>{tag}</span>
+                  ))}
+                </div>
+
+                <a href={project.link} target="_blank" rel="noopener" class="project-link">
+                  {ctaLabel}
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path
+                      d="M3 10h14M10 3l7 7-7 7"
+                      stroke="currentColor"
+                      stroke-width="1.75"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
   </div>
 </section>
 
 <script>
-  const mainImage = document.querySelector<HTMLImageElement>('#project-main-image');
   const shotButtons = document.querySelectorAll<HTMLButtonElement>('.project-shot-button');
 
   shotButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const nextImage = button.dataset.image;
+      const projectCard = button.closest('.project-feature');
+      const mainImage = projectCard?.querySelector<HTMLImageElement>('.project-main-image');
       if (!mainImage || !nextImage) return;
 
       mainImage.src = nextImage;
-      shotButtons.forEach((item) => item.classList.remove('active'));
+      projectCard.querySelectorAll('.project-shot-button').forEach((item) => item.classList.remove('active'));
       button.classList.add('active');
     });
   });
@@ -85,13 +113,19 @@ const project = projectsData[0];
     scroll-margin-top: 80px;
   }
 
+  .projects-list {
+    display: grid;
+    gap: 1.4rem;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
   .project-feature {
     position: relative;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    max-width: 980px;
     min-height: 26rem;
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
     border: 1px solid rgba(99, 102, 241, 0.22);
     border-radius: 1.25rem;
@@ -99,6 +133,10 @@ const project = projectsData[0];
       radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.16), transparent 34%),
       linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(2, 6, 23, 0.82));
     box-shadow: 0 28px 80px rgba(2, 6, 23, 0.38);
+  }
+
+  .project-feature--compact {
+    min-height: 22rem;
   }
 
   @media (min-width: 768px) {
@@ -111,6 +149,48 @@ const project = projectsData[0];
     position: relative;
     min-height: 17rem;
     overflow: hidden;
+  }
+
+  .project-code-art {
+    position: relative;
+    display: grid;
+    place-content: center;
+    gap: 0.75rem;
+    min-height: 17rem;
+    height: 100%;
+    padding: 2rem;
+    background:
+      radial-gradient(circle at 32% 22%, rgba(56, 189, 248, 0.18), transparent 32%),
+      radial-gradient(circle at 70% 72%, rgba(52, 211, 153, 0.14), transparent 34%),
+      linear-gradient(135deg, rgba(15, 23, 42, 0.94), rgba(2, 6, 23, 0.78));
+    color: #93c5fd;
+  }
+
+  .project-code-icon {
+    display: grid;
+    place-items: center;
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto 0.5rem;
+    border: 1px solid rgba(56, 189, 248, 0.24);
+    border-radius: 1.1rem;
+    background: rgba(15, 23, 42, 0.72);
+  }
+
+  .project-code-icon svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .project-code-art span {
+    justify-self: center;
+    border: 1px solid rgba(99, 102, 241, 0.22);
+    border-radius: 999px;
+    background: rgba(99, 102, 241, 0.08);
+    color: #c4b5fd;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 800;
   }
 
   .project-art > img {
