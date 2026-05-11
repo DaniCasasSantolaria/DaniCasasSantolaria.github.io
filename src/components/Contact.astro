@@ -22,36 +22,38 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="space-y-4 reveal" style="transition-delay: 0.1s;">
-          <div class="card">
-            <div class="flex items-center gap-4">
-              <div
-                class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center shrink-0"
-              >
-                <svg
-                  class="w-5 h-5 text-accent"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  ></path>
-                </svg>
+          {
+            personalData.email && (
+              <div class="card">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
+                    <svg
+                      class="w-5 h-5 text-accent"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-white font-semibold text-sm">Email</h3>
+                    <a
+                      href={`mailto:${personalData.email}`}
+                      class="text-slate-400 text-sm hover:text-accent transition-colors"
+                    >
+                      {personalData.email}
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h3 class="text-white font-semibold text-sm">Email</h3>
-                <a
-                  href={`mailto:${personalData.email}`}
-                  class="text-slate-400 text-sm hover:text-accent transition-colors"
-                >
-                  {personalData.email}
-                </a>
-              </div>
-            </div>
-          </div>
+            )
+          }
 
           {
             personalData.phone && (

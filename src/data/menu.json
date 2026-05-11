@@ -4,49 +4,49 @@
       "label": "About",
       "shortLabel": "About",
       "href": "#about",
-      "desc": "Background, experience, and approach"
+      "desc": "Background, education, and current focus"
     },
     {
       "label": "Expertise",
       "shortLabel": "Expertise",
       "href": "#expertise",
-      "desc": "What I focus on and how I work"
+      "desc": "Gameplay, systems, design, and teamwork"
     },
     {
       "label": "Skills",
       "shortLabel": "Skills",
       "href": "#skills",
-      "desc": "Tools and technologies I use"
+      "desc": "Tools, languages, and production workflow"
     },
     {
       "label": "Portfolio",
       "shortLabel": "Portfolio",
       "href": "#portfolio",
-      "desc": "Client and commercial work"
+      "desc": "Project breakdowns and visual material"
     },
     {
       "label": "Projects",
       "shortLabel": "Projects",
       "href": "#projects",
-      "desc": "Personal projects and experiments"
+      "desc": "Playable work, prototypes, and portfolio projects"
     },
     {
-      "label": "Certifications",
-      "shortLabel": "Certs",
+      "label": "Education",
+      "shortLabel": "Education",
       "href": "#certifications",
-      "desc": "Training, courses, and credentials"
+      "desc": "Studies and active learning"
     },
     {
-      "label": "Services",
-      "shortLabel": "Services",
+      "label": "Links",
+      "shortLabel": "Links",
       "href": "#services",
-      "desc": "Sites and projects I run"
+      "desc": "Project and professional profile links"
     },
     {
       "label": "Contact",
       "shortLabel": "Contact",
       "href": "#contact",
-      "desc": "Start a project or just say hello"
+      "desc": "Reach out for opportunities or collaboration"
     }
   ]
 }
