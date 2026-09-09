@@ -28,14 +28,14 @@ function cardModClass(type: CertType) {
 <section id="certifications" class="py-24" style="scroll-margin-top: 80px;">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 reveal">
-      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">Education</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Education & Learning</h2>
+      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3" data-i18n="cert.eyebrow">Education</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title" data-i18n="cert.title">Education & Learning</h2>
       <div class="flex flex-wrap items-center justify-center gap-4 mt-5">
         <span class="legend-item">
-          <span class="legend-dot dot-earned"></span>Certification
+          <span class="legend-dot dot-earned"></span><span data-i18n="cert.certification">Certification</span>
         </span>
         <span class="legend-item">
-          <span class="legend-dot dot-in-progress"></span>In Progress
+          <span class="legend-dot dot-in-progress"></span><span data-i18n="cert.inProgress">In Progress</span>
         </span>
       </div>
     </div>
@@ -54,11 +54,11 @@ function cardModClass(type: CertType) {
                   <h3
                     class={`text-base font-bold text-white transition-colors leading-snug ${titleHoverClass(type)}`}
                   >
-                    {cert.name}
+                    <span data-i18n={cert.name === 'Studying Video Game Development' ? 'cert.name.study' : undefined}>{cert.name}</span>
                   </h3>
                   <span class={`cert-badge ${badgeClass(type)}`}>
                     {type === 'in-progress' && <span class="badge-pulse-dot" />}
-                    {cert.status}
+                    <span data-i18n={cert.status === 'In Progress' ? 'cert.inProgress' : undefined}>{cert.status}</span>
                   </span>
                 </div>
 
@@ -66,10 +66,10 @@ function cardModClass(type: CertType) {
                   class={`text-xs font-semibold uppercase tracking-wider ${type === 'professional-development' ? 'text-amber-500/70' : type === 'in-progress' ? 'text-blue-400/80' : 'text-accent'}`}
                 >
                   {cert.issuer}
-                  {type === 'professional-development' && <span class="issuer-tag">Course</span>}
+                  {type === 'professional-development' && <span class="issuer-tag" data-i18n="cert.course">Course</span>}
                 </p>
 
-                <p class="text-slate-400 text-sm leading-relaxed">{cert.description}</p>
+                <p class="text-slate-400 text-sm leading-relaxed" data-i18n={cert.name === 'Studying Video Game Development' ? 'cert.desc.study' : undefined}>{cert.description}</p>
 
                 <div class="flex items-center justify-between pt-2 border-t border-white/5">
                   <span class="text-xs text-slate-600 font-mono">{cert.date}</span>
@@ -77,7 +77,7 @@ function cardModClass(type: CertType) {
                   {type === 'in-progress' ? (
                     <span class="in-progress-label">
                       <span class="ip-pulse" />
-                      Actively Studying
+                      <span data-i18n="cert.active">Actively Studying</span>
                     </span>
                   ) : cert.credentialUrl ? (
                     <a
@@ -86,7 +86,7 @@ function cardModClass(type: CertType) {
                       rel="noopener noreferrer"
                       class={`inline-flex items-center gap-1.5 transition-colors text-xs font-medium ${type === 'professional-development' ? 'text-amber-500/70 hover:text-amber-400' : 'text-accent hover:text-highlight'}`}
                     >
-                      <span>
+                      <span data-i18n={type === 'professional-development' ? 'cert.viewCertificate' : 'cert.viewCredential'}>
                         {type === 'professional-development'
                           ? 'View Certificate'
                           : 'View Credential'}
@@ -106,7 +106,7 @@ function cardModClass(type: CertType) {
                       </svg>
                     </a>
                   ) : (
-                    <span class="text-slate-700 text-xs italic">No link available</span>
+                    <span class="text-slate-700 text-xs italic" data-i18n="cert.noLink">No link available</span>
                   )}
                 </div>
               </div>

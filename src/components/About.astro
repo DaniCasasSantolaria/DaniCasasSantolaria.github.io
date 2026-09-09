@@ -6,14 +6,14 @@ import personalData from '../data/personal.json';
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-12 reveal">
-        <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">
+        <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3" data-i18n="about.eyebrow">
           Get to know me
         </p>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-0 section-title">About Me</h2>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-0 section-title" data-i18n="about.title">About Me</h2>
       </div>
 
       <div class="card reveal" style="transition-delay: 0.15s;">
-        <p class="text-lg text-slate-300 leading-relaxed">
+        <p class="text-lg text-slate-300 leading-relaxed" data-i18n="about.long">
           {personalData.aboutLong}
         </p>
 
@@ -40,8 +40,8 @@ import personalData from '../data/personal.json';
               </svg>
             </div>
             <div>
-              <h3 class="text-white font-semibold mb-1">Role</h3>
-              <p class="text-slate-400 text-sm">{personalData.title}</p>
+              <h3 class="text-white font-semibold mb-1" data-i18n="about.role">Role</h3>
+              <p class="text-slate-400 text-sm" data-i18n="about.roleValue">{personalData.title}</p>
             </div>
           </div>
 
@@ -70,8 +70,8 @@ import personalData from '../data/personal.json';
               </svg>
             </div>
             <div>
-              <h3 class="text-white font-semibold mb-1">Location</h3>
-              <p class="text-slate-400 text-sm">{personalData.location}</p>
+              <h3 class="text-white font-semibold mb-1" data-i18n="about.location">Location</h3>
+              <p class="text-slate-400 text-sm" data-i18n="about.locationValue">{personalData.location}</p>
             </div>
           </div>
 
@@ -95,8 +95,8 @@ import personalData from '../data/personal.json';
               </svg>
             </div>
             <div>
-              <h3 class="text-white font-semibold mb-1">Education</h3>
-              <p class="text-slate-400 text-sm">{personalData.education}</p>
+              <h3 class="text-white font-semibold mb-1" data-i18n="about.education">Education</h3>
+              <p class="text-slate-400 text-sm" data-i18n="about.educationValue">{personalData.education}</p>
             </div>
           </div>
 
@@ -120,7 +120,7 @@ import personalData from '../data/personal.json';
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-white font-semibold mb-1">Volunteer</h3>
+                  <h3 class="text-white font-semibold mb-1" data-i18n="about.volunteer">Volunteer</h3>
                   <p class="text-slate-400 text-sm">{personalData.volunteer}</p>
                 </div>
               </div>

@@ -6,10 +6,10 @@ import { withBase } from '../lib/assetPath';
 <section id="skills" class="py-24" style="scroll-margin-top: 80px;">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 reveal">
-      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">
-        What I work with
-      </p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Tools & Skills</h2>
+        <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3" data-i18n="skills.eyebrow">
+          What I work with
+        </p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title" data-i18n="skills.title">Tools & Skills</h2>
     </div>
 
     <div class="skills-shell max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -18,7 +18,7 @@ import { withBase } from '../lib/assetPath';
           <div class="skills-card card reveal" style={`--category-index: ${ci}; transition-delay: ${ci * 0.1}s;`}>
             <div class="skills-card-header">
               <span class="skills-kicker">0{ci + 1}</span>
-              <h3>{category.title}</h3>
+              <h3 data-i18n={`skills.${category.title.toLowerCase().replaceAll(' & ', '-').replaceAll(' ', '-')}`}>{category.title}</h3>
             </div>
 
             <div class="skill-grid">
@@ -32,7 +32,7 @@ import { withBase } from '../lib/assetPath';
                     width="36"
                     height="36"
                   />
-                  <span class="skill-name">{skill.name}</span>
+                  <span class="skill-name" data-i18n={skill.name === 'Gameplay Prototyping' ? 'skill.gameplay-prototyping' : skill.name === 'Level Design' ? 'skill.level-design' : undefined}>{skill.name}</span>
                 </div>
               ))}
             </div>

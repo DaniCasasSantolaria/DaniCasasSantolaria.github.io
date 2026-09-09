@@ -2,20 +2,46 @@
 import projectsData from '../data/projects.json';
 import { withBase } from '../lib/assetPath';
 import { icons } from '../lib/icons';
+
+const projects = projectsData as Array<(typeof projectsData)[number] & {
+  repositories?: {
+    label: string;
+    i18nKey?: string;
+    repo: string;
+    url: string;
+  }[];
+}>;
+
+function projectI18nKey(title: string) {
+  if (title === 'Carved') return 'carved';
+  if (title === 'SDL Arcade games') return 'sdl';
+  if (title === 'Networked Games') return 'network';
+  return '';
+}
 ---
 
 <section id="projects" class="projects-section">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12 reveal visible">
-      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">My work</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Projects</h2>
+      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3" data-i18n="projects.eyebrow">My work</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title" data-i18n="projects.title">Projects</h2>
     </div>
 
     <div class="projects-list">
       {
-        projectsData.map((project, index) => {
+        projects.map((project, index) => {
           const hasImages = Boolean(project.backgroundImage && project.images?.length);
-          const ctaLabel = project.link.includes('github.com') ? 'View on GitHub' : 'Play on itch.io';
+          const key = projectI18nKey(project.title);
+          const ctaKey = project.repositories?.length
+            ? 'projects.viewRepos'
+            : project.link.includes('github.com')
+              ? 'projects.viewGithub'
+              : 'projects.playItch';
+          const ctaLabel = project.repositories?.length
+            ? 'View repositories'
+            : project.link.includes('github.com')
+              ? 'View on GitHub'
+              : 'Play on itch.io';
 
           return (
             <article class={`project-feature reveal visible ${hasImages ? '' : 'project-feature--compact'}`}>
@@ -50,17 +76,15 @@ import { icons } from '../lib/icons';
                     <div class="project-code-icon">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" set:html={icons[project.icon] ?? icons['code-bracket-square']} />
                     </div>
-                    <span>SDL</span>
-                    <span>C++</span>
-                    <span>Arcade Loop</span>
+                    {project.tags.slice(0, 3).map((tag) => <span>{tag}</span>)}
                   </div>
                 )}
               </div>
 
               <div class="project-copy">
-                <p class="project-eyebrow">{project.company}</p>
+                <p class="project-eyebrow" data-i18n={key ? `projects.${key}.company` : undefined}>{project.company}</p>
                 <h3>{project.title}</h3>
-                <p class="project-description">{project.description}</p>
+                <p class="project-description" data-i18n={key ? `projects.${key}.description` : undefined}>{project.description}</p>
 
                 <div class="project-tags">
                   {project.tags.map((tag) => (
@@ -68,8 +92,19 @@ import { icons } from '../lib/icons';
                   ))}
                 </div>
 
+                {project.repositories?.length ? (
+                  <div class="repo-group" aria-label="Repository group" data-i18n-aria-label="projects.repoGroup">
+                    {project.repositories.map((repo) => (
+                      <a href={repo.url} target="_blank" rel="noopener" class="repo-link" aria-label={`Open repository ${repo.repo}`}>
+                        <span class="repo-link-label" data-i18n={repo.i18nKey}>{repo.label}</span>
+                        <span class="repo-link-name">{repo.repo.split('/')[1]}</span>
+                      </a>
+                    ))}
+                  </div>
+                ) : null}
+
                 <a href={project.link} target="_blank" rel="noopener" class="project-link">
-                  {ctaLabel}
+                  <span data-i18n={ctaKey}>{ctaLabel}</span>
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path
                       d="M3 10h14M10 3l7 7-7 7"
@@ -326,6 +361,71 @@ import { icons } from '../lib/icons';
     padding: 0.35rem 0.75rem;
     font-size: 0.74rem;
     font-weight: 700;
+  }
+
+  .repo-group {
+    display: grid;
+    gap: 0.55rem;
+    margin-top: 1.35rem;
+    padding: 0.8rem;
+    border: 1px solid rgba(56, 189, 248, 0.16);
+    border-radius: 0.75rem;
+    background: rgba(15, 23, 42, 0.46);
+  }
+
+  .repo-link {
+    display: grid;
+    grid-template-columns: minmax(5.4rem, 0.36fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 2.55rem;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 0.5rem;
+    color: var(--text-muted);
+    background: rgba(2, 6, 23, 0.38);
+    text-decoration: none;
+    transition:
+      border-color 0.2s ease,
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .repo-link:hover {
+    border-color: rgba(52, 211, 153, 0.42);
+    background: rgba(16, 185, 129, 0.08);
+    transform: translateX(3px);
+  }
+
+  .repo-link:focus-visible {
+    outline: 2px solid #34d399;
+    outline-offset: 3px;
+  }
+
+  .repo-link-label {
+    color: #a7f3d0;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .repo-link-name {
+    min-width: 0;
+    overflow: hidden;
+    color: #8fa8c8;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+    font-size: 0.72rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 460px) {
+    .repo-link {
+      grid-template-columns: 1fr;
+      gap: 0.15rem;
+      align-items: start;
+    }
   }
 
   .project-link {

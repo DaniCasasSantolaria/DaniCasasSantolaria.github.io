@@ -2,6 +2,7 @@
 import personalData from '../data/personal.json';
 import menu from '../data/menu.json';
 import siteData from '../data/site.json';
+import { translations } from '../data/translations';
 
 const { sections } = menu;
 
@@ -15,9 +16,10 @@ const external = siteData.navExternal
       label: item.label,
       desc: item.desc,
       url: item.urlTemplate.replace('{value}', value),
+      i18nDesc: `external.${item.label.toLowerCase()}.desc`,
     };
   })
-  .filter(Boolean) as { label: string; desc: string; url: string }[];
+  .filter(Boolean) as { label: string; desc: string; url: string; i18nDesc: string }[];
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
@@ -30,7 +32,7 @@ const external = siteData.navExternal
       <div class="hidden lg:flex items-center gap-6">
         {
           sections.map((item) => (
-            <a href={item.href} class="nav-link nav-link-sm">
+            <a href={item.href} class="nav-link nav-link-sm" data-i18n={`nav.${item.href.slice(1)}.short`}>
               {item.shortLabel}
             </a>
           ))
@@ -38,6 +40,18 @@ const external = siteData.navExternal
       </div>
 
       <div class="flex items-center gap-3">
+        <div class="language-switcher" role="group" aria-label="Language" data-i18n-aria-label="language.label">
+          <button type="button" class="language-btn active" data-lang-option="en" aria-pressed="true">
+            EN
+          </button>
+          <button type="button" class="language-btn" data-lang-option="ca" aria-pressed="false">
+            CA
+          </button>
+          <button type="button" class="language-btn" data-lang-option="es" aria-pressed="false">
+            ES
+          </button>
+        </div>
+
         <label class="switch" aria-label="Toggle light/dark mode" title="Toggle light / dark mode">
           <span class="sun"
             ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -75,7 +89,7 @@ const external = siteData.navExternal
               <span class="dm-num">0{i + 1}</span>
               <span class="dm-body">
                 <span class="dm-label">{link.label}</span>
-                <span class="dm-desc">{link.desc}</span>
+                <span class="dm-desc" data-i18n={link.i18nDesc}>{link.desc}</span>
               </span>
               <svg
                 class="dm-arrow"
@@ -115,15 +129,15 @@ const external = siteData.navExternal
   <div class="overlay-glow" aria-hidden="true"></div>
 
   <div class="overlay-inner">
-    <p class="overlay-eyebrow">Explore</p>
+    <p class="overlay-eyebrow" data-i18n="nav.explore">Explore</p>
     <nav class="overlay-nav">
       {
         sections.map((item, i) => (
           <a href={item.href} class="overlay-link" style={`--i: ${i};`}>
             <span class="overlay-num">0{i + 1}</span>
             <span class="overlay-link-body">
-              <span class="overlay-link-label">{item.label}</span>
-              <span class="overlay-link-desc">{item.desc}</span>
+              <span class="overlay-link-label" data-i18n={`nav.${item.href.slice(1)}.label`}>{item.label}</span>
+              <span class="overlay-link-desc" data-i18n={`nav.${item.href.slice(1)}.desc`}>{item.desc}</span>
             </span>
             <svg
               class="overlay-arrow"
@@ -144,7 +158,7 @@ const external = siteData.navExternal
     </nav>
 
     <div class="overlay-bottom">
-      <p class="overlay-bottom-label">External</p>
+      <p class="overlay-bottom-label" data-i18n="nav.external">External</p>
       {
         external.map((link) => (
           <a href={link.url} target="_blank" rel="noopener" class="overlay-quick-link">
@@ -191,6 +205,53 @@ const external = siteData.navExternal
   .cta-btn:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
+  }
+
+  .language-switcher {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.2rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background: rgba(15, 23, 42, 0.58);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .language-btn {
+    display: inline-grid;
+    place-items: center;
+    min-width: 2rem;
+    height: 1.75rem;
+    border-radius: 0.35rem;
+    color: var(--text-dim);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .language-btn:hover,
+  .language-btn.active {
+    color: var(--text);
+    background: rgba(99, 102, 241, 0.18);
+  }
+
+  .language-btn.active {
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.36);
+  }
+
+  .language-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  [data-theme='light'] .language-switcher {
+    background: rgba(255, 255, 255, 0.72);
   }
 
   .switch {
@@ -309,8 +370,16 @@ const external = siteData.navExternal
   }
   @media (max-width: 767px) {
     .switch {
-      position: absolute;
-      right: 15vw;
+      position: static;
+    }
+
+    .language-switcher {
+      grid-template-columns: repeat(3, 1.75rem);
+    }
+
+    .language-btn {
+      min-width: 1.75rem;
+      font-size: 0.62rem;
     }
   }
 
@@ -737,7 +806,7 @@ const external = siteData.navExternal
 
   @media (min-width: 640px) and (max-width: 767px) {
     header .container .gap-3 {
-      gap: 30vw !important;
+      gap: 0.75rem !important;
     }
   }
 
@@ -752,7 +821,66 @@ const external = siteData.navExternal
   }
 </style>
 
+<script define:vars={{ translations }}>
+  window.__portfolioTranslations = translations;
+</script>
+
 <script>
+  const I18N = (
+    window as Window & { __portfolioTranslations?: Record<string, Record<string, string>> }
+  ).__portfolioTranslations ?? { en: {} };
+  const LANG_KEY = 'portfolio-language';
+  const languageButtons = Array.from(
+    document.querySelectorAll<HTMLButtonElement>('[data-lang-option]')
+  );
+
+  function setTranslatedAttr(el: HTMLElement, attr: string, value: string) {
+    if (attr === 'aria-label') {
+      el.setAttribute('aria-label', value);
+    } else if (attr === 'placeholder' && el instanceof HTMLInputElement) {
+      el.placeholder = value;
+    } else if (attr === 'placeholder' && el instanceof HTMLTextAreaElement) {
+      el.placeholder = value;
+    } else {
+      el.setAttribute(attr, value);
+    }
+  }
+
+  function applyLanguage(language: string) {
+    const next = I18N[language] ? language : 'en';
+    const dictionary = I18N[next];
+    document.documentElement.lang = next;
+
+    document.querySelectorAll<HTMLElement>('[data-i18n]').forEach((el) => {
+      const key = el.dataset.i18n;
+      if (key && dictionary[key]) el.textContent = dictionary[key];
+    });
+
+    document.querySelectorAll<HTMLElement>('[data-i18n-aria-label]').forEach((el) => {
+      const key = el.dataset.i18nAriaLabel;
+      if (key && dictionary[key]) setTranslatedAttr(el, 'aria-label', dictionary[key]);
+    });
+
+    document.querySelectorAll<HTMLElement>('[data-i18n-placeholder]').forEach((el) => {
+      const key = el.dataset.i18nPlaceholder;
+      if (key && dictionary[key]) setTranslatedAttr(el, 'placeholder', dictionary[key]);
+    });
+
+    languageButtons.forEach((button) => {
+      const active = button.dataset.langOption === next;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+
+    localStorage.setItem(LANG_KEY, next);
+  }
+
+  applyLanguage(localStorage.getItem(LANG_KEY) || 'en');
+
+  languageButtons.forEach((button) => {
+    button.addEventListener('click', () => applyLanguage(button.dataset.langOption || 'en'));
+  });
+
   const html = document.documentElement;
   const checkbox = document.getElementById('theme-checkbox') as HTMLInputElement;
 

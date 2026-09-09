@@ -33,5 +33,39 @@
     "link": "https://github.com/DaniCasasSantolaria/EnginyeriaDelSoftware_AA2_SDL",
     "colorIcon": "/images/icons/devicons/cplusplus-original.svg",
     "githubRepo": "DaniCasasSantolaria/EnginyeriaDelSoftware_AA2_SDL"
+  },
+  {
+    "title": "Networked Games",
+    "featured": true,
+    "resume": true,
+    "company": "GitHub Project",
+    "category": "networking",
+    "description": "A networked games assignment split across UDP server, UDP client, and TCP server repositories, focused on client-server communication and multiplayer gameplay foundations.",
+    "tags": ["UDP", "TCP", "Client-Server", "Multiplayer"],
+    "icon": "code-bracket-square",
+    "sliderOrder": 3,
+    "link": "https://github.com/DaniCasasSantolaria/AA3_JocsEnXarxaUDP_Servidor",
+    "colorIcon": "/images/icons/devicons/cplusplus-original.svg",
+    "githubRepo": "DaniCasasSantolaria/AA3_JocsEnXarxaUDP_Servidor",
+    "repositories": [
+      {
+        "label": "UDP Server",
+        "i18nKey": "projects.network.repo.udpServer",
+        "repo": "DaniCasasSantolaria/AA3_JocsEnXarxaUDP_Servidor",
+        "url": "https://github.com/DaniCasasSantolaria/AA3_JocsEnXarxaUDP_Servidor"
+      },
+      {
+        "label": "UDP Client",
+        "i18nKey": "projects.network.repo.udpClient",
+        "repo": "DaniCasasSantolaria/AA3_JocsEnXarxaUDP_Client",
+        "url": "https://github.com/DaniCasasSantolaria/AA3_JocsEnXarxaUDP_Client"
+      },
+      {
+        "label": "TCP Server",
+        "i18nKey": "projects.network.repo.tcpServer",
+        "repo": "DaniCasasSantolaria/AA3_JocsEnXarxaTCP_Server",
+        "url": "https://github.com/DaniCasasSantolaria/AA3_JocsEnXarxaTCP_Server"
+      }
+    ]
   }
 ]

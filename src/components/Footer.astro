@@ -28,7 +28,7 @@ const footerKeywords = [
         </div>
 
         <p class="footer-name">{personalData.name}</p>
-        <p class="footer-tagline">
+        <p class="footer-tagline" data-i18n="footer.tagline">
           Gameplay programming | Interactive systems | Game development student
         </p>
 
@@ -45,18 +45,18 @@ const footerKeywords = [
         </a>
       </div>
 
-      <nav class="footer-nav" aria-label="Footer navigation">
+      <nav class="footer-nav" aria-label="Footer navigation" data-i18n-aria-label="footer.navigation">
         {
           navLinks.map((link) => (
-            <a href={link.href} class="footer-nav-link">
+            <a href={link.href} class="footer-nav-link" data-i18n={`nav.${link.href.slice(1)}.label`}>
               {link.label}
             </a>
           ))
         }
       </nav>
 
-      <div class="footer-keywords" aria-label="Profile keywords">
-        {footerKeywords.map((kw) => <span class="footer-kw">{kw}</span>)}
+      <div class="footer-keywords" aria-label="Profile keywords" data-i18n-aria-label="footer.profileKeywords">
+        {footerKeywords.map((kw, i) => <span class="footer-kw" data-i18n={`footer.keywords.${i}`}>{kw}</span>)}
       </div>
     </div>
 

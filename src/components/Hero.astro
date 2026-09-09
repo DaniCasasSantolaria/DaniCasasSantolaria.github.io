@@ -19,8 +19,6 @@ const featuredProjects = augmented
     featuredImage: p.featuredImage ?? p.sliderImage ?? p.backgroundImage,
   }))
   .filter((p) => p.featuredImage);
-// Split "Frontend & Backend" so the "&" can be styled with a different colour in the template.
-const heroParts = personalData.heroRole.split(' & ');
 ---
 
 <section id="home" class="relative min-h-screen overflow-hidden flex items-center">
@@ -54,47 +52,40 @@ const heroParts = personalData.heroRole.split(' & ');
       class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen lg:min-h-0 lg:py-32"
     >
       <div class="order-2 lg:order-1 space-y-6 relative">
-        <p class="text-sm font-semibold tracking-widest text-highlight uppercase reveal">
+        <p class="text-sm font-semibold tracking-widest text-highlight uppercase reveal" data-i18n="hero.eyebrow">
           Welcome to my portfolio
         </p>
 
         <div class="reveal text-backdrop" style="transition-delay: 0.1s;">
           <h1 class="font-bold leading-tight" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">
-            Hi, I'm<br />
+            <span data-i18n="hero.greeting">Hi, I'm</span><br />
             <span class="gradient-text">{personalData.name}</span>
           </h1>
 
-          <h2 class="text-slate-400 font-light mt-3" style="font-size: clamp(1rem, 2.2vw, 1.5rem);">
-            {
-              heroParts.length > 1 ? (
-                <>
-                  {heroParts[0]} <span class="text-highlight">&</span>{' '}
-                  {heroParts.slice(1).join(' & ')}
-                </>
-              ) : (
-                heroParts[0]
-              )
-            }
+          <h2 class="text-slate-400 font-light mt-3" style="font-size: clamp(1rem, 2.2vw, 1.5rem);" data-i18n="hero.role">
+            {personalData.heroRole}
           </h2>
         </div>
 
         <p
           class="text-base text-slate-400 max-w-lg leading-relaxed reveal text-backdrop"
           style="transition-delay: 0.2s;"
+          data-i18n="hero.bio"
         >
           {personalData.bio}
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 reveal" style="transition-delay: 0.3s;">
-          <a href="#projects" class="btn-primary text-center">View Carved</a>
+          <a href="#projects" class="btn-primary text-center" data-i18n="hero.primaryCta">View Carved</a>
           {personalData.cv ? (
             <a
               href={personalData.cv}
               target="_blank"
               rel="noopener noreferrer"
-              class="btn-secondary text-center">Download CV</a>
+              class="btn-secondary text-center"
+              data-i18n="hero.cv">Download CV</a>
           ) : (
-            <button onclick="window.print()" class="btn-secondary text-center">Print Resume</button>
+            <button onclick="window.print()" class="btn-secondary text-center" data-i18n="hero.print">Print Resume</button>
           )}
         </div>
 
@@ -138,7 +129,7 @@ const heroParts = personalData.heroRole.split(' & ');
         >
           <article class="project-frame" id="project-frame">
             <div class="pf-header" id="project-frame-header">
-              <h2 class="pf-title">Featured Projects</h2>
+              <h2 class="pf-title" data-i18n="hero.featured">Featured Projects</h2>
               <div class="pf-btn-group">
                 <button
                   type="button"
@@ -146,6 +137,7 @@ const heroParts = personalData.heroRole.split(' & ');
                   class="pf-btn"
                   style="--glow-color:rgba(14,165,233,0.8);"
                   aria-label="Fullscreen"
+                  data-i18n-aria-label="hero.fullscreen"
                 >
                   <svg viewBox="0 0 512 512" class="pf-btn-icon" fill="currentColor">
                     <path
@@ -159,6 +151,7 @@ const heroParts = personalData.heroRole.split(' & ');
                   class="pf-btn"
                   style="--glow-color:rgba(99,102,241,0.8);"
                   aria-label="Minimize"
+                  data-i18n-aria-label="hero.minimize"
                 >
                   <svg viewBox="0 0 384 512" class="pf-btn-icon" fill="currentColor">
                     <path
@@ -228,6 +221,7 @@ const heroParts = personalData.heroRole.split(' & ');
               id="slider-prev"
               class="slider-nav-btn slider-nav-prev"
               aria-label="Previous project"
+              data-i18n-aria-label="hero.prev"
             >
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="slider-nav-icon">
                 <path
@@ -241,6 +235,7 @@ const heroParts = personalData.heroRole.split(' & ');
               id="slider-next"
               class="slider-nav-btn slider-nav-next"
               aria-label="Next project"
+              data-i18n-aria-label="hero.next"
             >
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="slider-nav-icon">
                 <path

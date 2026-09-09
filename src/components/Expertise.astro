@@ -6,8 +6,8 @@ import { icons } from '../lib/icons';
 <section id="expertise" class="py-20" style="scroll-margin-top: 80px;">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-14 reveal">
-      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">What I do</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Expertise</h2>
+      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3" data-i18n="expertise.eyebrow">What I do</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title" data-i18n="expertise.title">Expertise</h2>
     </div>
 
     <div class="expertise-grid max-w-6xl mx-auto">
@@ -19,8 +19,8 @@ import { icons } from '../lib/icons';
             </div>
             <div class="expertise-copy">
               <span class="expertise-index">0{i + 1}</span>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+              <h3 data-i18n={`expertise.${item.key}.title`}>{item.title}</h3>
+              <p data-i18n={`expertise.${item.key}.description`}>{item.description}</p>
             </div>
           </article>
         ))
