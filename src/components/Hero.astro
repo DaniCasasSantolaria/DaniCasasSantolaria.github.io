@@ -12,8 +12,8 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
       <div class="hero-intro">
         <div class="hero-identity">
           <img class="hero-portrait" src={withBase(personalData.photo)} alt={personalData.photoAlt} width="416" height="545" fetchpriority="high" />
-          <div><p class="hero-hello" data-i18n="hero.greeting">Hi, I'm</p><p class="person-note" data-i18n="hero.note">Learning by making. One game at a time.</p></div>
         </div>
+        <p class="hero-hello" data-i18n="hero.greeting">Hi, I'm</p>
         <h1>Daniel Casas<span>Santolaria<span class="name-period">.</span></span></h1>
         <p class="hero-role" data-i18n="hero.role">Gameplay Programmer & Game Developer</p>
         <p class="hero-description" data-i18n="hero.bio">{personalData.bio}</p>
@@ -52,9 +52,7 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
   .hero-person { display:flex; gap:14px; align-items:center; margin-top:24px; }
   .hero-identity { display:flex; align-items:center; gap:24px; margin-bottom:26px; }
   .hero-portrait { display:block; width:156px; height:188px; object-fit:cover; object-position:center 30%; border-radius:6px; border:1px solid var(--border); flex-shrink:0; }
-  .hero-identity .person-note { display:block; max-width:170px; line-height:1.7; color:var(--text-muted); }
   @media(max-width:767px) { .hero-portrait { width:132px; height:160px; } .hero-identity { gap:20px; margin-bottom:24px; } }
-  .person-note { font-family:var(--font-display); font-style:normal; font-size:.78rem; }
   .hero-socials { display:flex; gap:18px; font-size:.7rem; color:var(--text-muted); margin-top:6px; }
   .hero-work { display:block; transform:translateY(0); padding:18px; background:var(--bg-card-solid); border:1px solid var(--border); box-shadow:0 16px 40px #1018280a; border-radius:6px; transition:transform .3s; }
   .hero-work:hover { transform:translateY(-3px); }
