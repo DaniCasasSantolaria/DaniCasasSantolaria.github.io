@@ -821,7 +821,7 @@ const external = siteData.navExternal
   }
 </style>
 
-<script define:vars={{ translations }}>
+<script is:inline define:vars={{ translations }}>
   window.__portfolioTranslations = translations;
 </script>
 
@@ -889,16 +889,16 @@ const external = siteData.navExternal
     if (theme === 'light') {
       html.setAttribute('data-theme', 'light');
       checkbox.checked = true;
-      if (metaTheme) metaTheme.setAttribute('content', '#f8fafc');
+      if (metaTheme) metaTheme.setAttribute('content', '#f5f6f8');
     } else {
       html.removeAttribute('data-theme');
       checkbox.checked = false;
-      if (metaTheme) metaTheme.setAttribute('content', '#020617');
+      if (metaTheme) metaTheme.setAttribute('content', '#17191e');
     }
   }
 
   const THEME_KEY = document.documentElement.dataset.themeKey || 'portfolio-theme';
-  applyTheme(localStorage.getItem(THEME_KEY) || 'dark');
+  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 
   checkbox.addEventListener('change', () => {
     const next = checkbox.checked ? 'light' : 'dark';

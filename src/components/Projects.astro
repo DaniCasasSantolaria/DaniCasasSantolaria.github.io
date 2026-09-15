@@ -50,7 +50,7 @@ function projectI18nKey(title: string) {
                   <>
                     <img
                       class="project-main-image"
-                      src={withBase(project.backgroundImage)}
+                      src={withBase(project.backgroundImage ?? '')}
                       alt={`${project.title} screenshot`}
                       loading="lazy"
                       width="900"
@@ -132,7 +132,7 @@ function projectI18nKey(title: string) {
       const nextImage = button.dataset.image;
       const projectCard = button.closest('.project-feature');
       const mainImage = projectCard?.querySelector<HTMLImageElement>('.project-main-image');
-      if (!mainImage || !nextImage) return;
+      if (!projectCard || !mainImage || !nextImage) return;
 
       mainImage.src = nextImage;
       projectCard.querySelectorAll('.project-shot-button').forEach((item) => item.classList.remove('active'));
