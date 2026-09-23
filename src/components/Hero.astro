@@ -7,14 +7,14 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
 
 <section id="home" class="editorial-hero">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="hero-topline"><span data-i18n="hero.eyebrow">Gameplay, with a human touch.</span><span>Barcelona · Portfolio</span></div>
+    <div class="hero-topline"><span>Barcelona · Portfolio</span></div>
     <div class="hero-layout">
       <div class="hero-intro">
         <div class="hero-identity">
           <img class="hero-portrait" src={withBase(personalData.photo)} alt={personalData.photoAlt} width="416" height="545" fetchpriority="high" />
         </div>
         <p class="hero-hello" data-i18n="hero.greeting">Hi, I'm</p>
-        <h1>Daniel Casas<span>Santolaria<span class="name-period">.</span></span></h1>
+        <h1>Daniel Casas<span>Santolaria</span></h1>
         <p class="hero-role" data-i18n="hero.role">Gameplay Programmer & Game Developer</p>
         <p class="hero-description" data-i18n="hero.bio">{personalData.bio}</p>
         <div class="hero-actions">
@@ -26,8 +26,8 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
         </div>
       </div>
       <a class="hero-work" href="#projects" aria-label="Carved">
-        <div class="work-caption"><span data-i18n="hero.featured">Selected project</span><span>01 / 03</span></div>
-        <div class="work-image"><img src={withBase('/images/projects/carved/carved-3.png')} alt="Carved — 3D puzzle-platformer" width="900" height="900" fetchpriority="high" /><span class="work-stamp" aria-hidden="true">C<span>↗</span></span></div>
+        <div class="work-caption"><span data-i18n="hero.featured">Selected project</span></div>
+        <div class="work-image"><img src={withBase('/images/projects/carved/carved-3.png')} alt="Carved — 3D puzzle-platformer" width="900" height="900" fetchpriority="high" /></div>
         <div class="work-info"><div><h2>Carved</h2><p data-i18n="hero.projectType">A world to explore. A puzzle to solve.</p></div><span class="work-arrow" aria-hidden="true">↗</span></div>
       </a>
     </div>
@@ -59,8 +59,6 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
   .work-caption { display:flex; justify-content:space-between; margin-bottom:14px; font-size:.65rem; text-transform:uppercase; letter-spacing:.13em; color:var(--text-muted); }
   .work-image { position:relative; aspect-ratio:1.15; overflow:hidden; background:#202329; }
   .work-image > img { width:100%; height:100%; object-fit:cover; }
-  .work-stamp { position:absolute; bottom:16px; left:16px; font-family:var(--font-display); font-weight:700; font-size:2.5rem; color:#f1f3f7; }
-  .work-stamp span { font-family:Arial,sans-serif; font-size:1rem; vertical-align:top; }
   .work-info { display:flex; justify-content:space-between; align-items:center; padding-top:18px; }
   .work-info h2 { font:650 2rem var(--font-display); letter-spacing:-.04em; } .work-info p { font-size:.7rem; color:var(--text-muted); margin-top:4px; }
   .work-arrow { font-size:1.5rem; } .hero-bottom { border-top:1px solid var(--border); padding:22px 0; }

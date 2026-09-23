@@ -4,7 +4,6 @@ import menuData from '../data/menu.json';
 import siteData from '../data/site.json';
 import { getSocialLinks } from '../lib/socialLinks';
 
-const currentYear = new Date().getFullYear();
 const socialLinks = getSocialLinks(personalData as unknown as Record<string, string | string[]>);
 const navLinks = menuData.sections.map((s) => ({ label: s.label, href: s.href }));
 const footerKeywords = [
@@ -60,15 +59,7 @@ const footerKeywords = [
       </div>
     </div>
 
-    <div class="footer-divider"></div>
-
     <div class="footer-bottom">
-      <p class="footer-copy">
-        Copyright {currentYear} {personalData.name}
-        <span aria-hidden="true">|</span>
-        <a href={`mailto:${personalData.email}`}>{personalData.email}</a>
-      </p>
-
       <div class="footer-socials">
         {
           socialLinks.map((link) => (
@@ -230,45 +221,12 @@ const footerKeywords = [
     }
   }
 
-  .footer-divider {
-    height: 1px;
-    margin: 2.25rem 0;
-    background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.45), transparent);
-  }
-
   .footer-bottom {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  @media (min-width: 640px) {
-    .footer-bottom {
-      flex-direction: row;
-    }
-  }
-
-  .footer-copy {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 0.45rem;
-    margin: 0;
-    color: #64748b;
-    font-size: 0.9rem;
-  }
-
-  .footer-copy a {
-    color: #94a3b8;
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  .footer-copy a:hover {
-    color: #38bdf8;
+    justify-content: flex-end;
+    margin-top: 2.25rem;
   }
 
   .footer-socials {

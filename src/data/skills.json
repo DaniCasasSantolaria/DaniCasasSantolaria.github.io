@@ -30,7 +30,7 @@
       { "name": "Git", "logo": "/images/icons/devicons/git-original-wordmark.svg" },
       { "name": "GitHub", "logo": "/images/icons/devicons/github-original.svg" },
       { "name": "Visual Studio", "logo": "/images/icons/devicons/visualstudio-original.svg" },
-      { "name": "VS Code", "logo": "/images/icons/devicons/vscode-original.svg" }
+      { "name": "Jira", "logo": "/images/icons/devicons/jira-original.svg" }
     ]
   }
 ]

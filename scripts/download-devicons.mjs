@@ -22,6 +22,7 @@ const icons = [
   ["visualstudio-plain.svg", "visualstudio/visualstudio-plain.svg"],
   ["visualstudio-original.svg", "visualstudio/visualstudio-original.svg"],
   ["vscode-original.svg", "vscode/vscode-original.svg"],
+  ["jira-original.svg", "jira/jira-original.svg"],
   ["markdown-original.svg", "markdown/markdown-original.svg"]
 ];
 
