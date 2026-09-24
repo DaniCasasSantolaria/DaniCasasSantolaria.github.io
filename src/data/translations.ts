@@ -29,6 +29,7 @@ export const translations = {
     'hero.projectType': 'A world to explore. A puzzle to solve.',
     'hero.scroll': 'Explore my work',
     'hero.greeting': "Hi, I'm",
+    'hero.status': 'Available for opportunities',
     'hero.role': 'Gameplay Programmer & Game Developer',
     'hero.bio':
       'Game development student based in Barcelona, focused on gameplay programming, interactive systems, and player-first prototypes.',
@@ -146,6 +147,7 @@ export const translations = {
     'hero.projectType': 'Un món per explorar. Un enigma per resoldre.',
     'hero.scroll': 'Explora els meus projectes',
     'hero.greeting': 'Hola, soc',
+    'hero.status': 'Disponible per a oportunitats',
     'hero.role': 'Programador de gameplay i desenvolupador de videojocs',
     'hero.bio':
       'Estudiant de desenvolupament de videojocs a Barcelona, centrat en programació de gameplay, sistemes interactius i prototips pensats per al jugador.',
@@ -263,6 +265,7 @@ export const translations = {
     'hero.projectType': 'Un mundo por explorar. Un puzle por resolver.',
     'hero.scroll': 'Explora mis proyectos',
     'hero.greeting': 'Hola, soy',
+    'hero.status': 'Disponible para oportunidades',
     'hero.role': 'Programador de gameplay y desarrollador de videojuegos',
     'hero.bio':
       'Estudiante de desarrollo de videojuegos en Barcelona, centrado en programación de gameplay, sistemas interactivos y prototipos pensados para el jugador.',

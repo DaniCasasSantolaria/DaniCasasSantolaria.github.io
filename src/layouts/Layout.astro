@@ -159,7 +159,36 @@ const shareImageUrl = new URL(withBase(personalData.photo), siteUrl).href;
     </script>
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <div class="cursor-aura" aria-hidden="true"></div>
     <a href="#main-content" class="skip-link" data-i18n="skip.main">Skip to main content</a>
     <slot />
+    <script>
+      const root = document.documentElement;
+      const progress = document.querySelector('.scroll-progress span') as HTMLElement | null;
+      const aura = document.querySelector('.cursor-aura') as HTMLElement | null;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      const updateProgress = () => {
+        const scrollable = root.scrollHeight - root.clientHeight;
+        const value = scrollable > 0 ? window.scrollY / scrollable : 0;
+        progress?.style.setProperty('--scroll-progress', String(Math.min(1, Math.max(0, value))));
+      };
+
+      let pointerFrame = 0;
+      window.addEventListener('pointermove', (event) => {
+        if (!aura || reduceMotion.matches || event.pointerType === 'touch') return;
+        cancelAnimationFrame(pointerFrame);
+        pointerFrame = requestAnimationFrame(() => {
+          aura.style.setProperty('--pointer-x', `${event.clientX}px`);
+          aura.style.setProperty('--pointer-y', `${event.clientY}px`);
+          aura.classList.add('is-visible');
+        });
+      }, { passive: true });
+
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      window.addEventListener('resize', updateProgress, { passive: true });
+      updateProgress();
+    </script>
   </body>
 </html>
