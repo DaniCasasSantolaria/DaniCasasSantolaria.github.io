@@ -3,6 +3,7 @@ import personalData from '../data/personal.json';
 import { getSocialLinks } from '../lib/socialLinks';
 import { withBase } from '../lib/assetPath';
 const socialLinks = getSocialLinks(personalData as unknown as Record<string, string | string[]>, personalData.heroSocialLinks);
+const showCvLink = false;
 ---
 
 <section id="home" class="editorial-hero">
@@ -20,7 +21,7 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
         <p class="hero-description" data-i18n="hero.bio">{personalData.bio}</p>
         <div class="hero-actions">
           <a href="#projects" class="btn-primary"><span data-i18n="hero.primaryCta">View my projects</span><span aria-hidden="true">↗</span></a>
-          <a href={withBase(personalData.cv)} target="_blank" rel="noopener noreferrer" class="hero-cv" data-i18n="hero.cv">Download CV</a>
+          {showCvLink && <a href={withBase(personalData.cv)} target="_blank" rel="noopener noreferrer" class="hero-cv" data-i18n="hero.cv">Download CV</a>}
         </div>
         <div class="hero-person">
           <div><div class="hero-socials">{socialLinks.map(link => <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}<span aria-hidden="true"> ↗</span></a>)}</div></div>
