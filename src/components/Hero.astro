@@ -21,7 +21,7 @@ const showCvLink = false;
         <p class="hero-description" data-i18n="hero.bio">{personalData.bio}</p>
         <div class="hero-actions">
           <a href="#projects" class="btn-primary"><span data-i18n="hero.primaryCta">View my projects</span><span aria-hidden="true">↗</span></a>
-          <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personalData.email)}`} target="_blank" rel="noopener noreferrer" class="btn-secondary hero-contact"><span data-i18n="hero.contact">Contact me</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 6 9 7 9-7" /></svg></a>
+          <a href={`mailto:${personalData.email}`} class="btn-secondary hero-contact"><span data-i18n="hero.contact">Contact me</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 6 9 7 9-7" /></svg></a>
           {showCvLink && <a href={withBase(personalData.cv)} target="_blank" rel="noopener noreferrer" class="hero-cv" data-i18n="hero.cv">Download CV</a>}
         </div>
         <div class="hero-person">

@@ -13,6 +13,7 @@ const projects = projectsData as Array<(typeof projectsData)[number] & {
 }>;
 
 function projectI18nKey(title: string) {
+  if (title === 'Echoes Of The Abyss') return 'echoes';
   if (title === 'Carved') return 'carved';
   if (title === 'SDL Arcade games') return 'sdl';
   if (title === 'Networked Games') return 'network';
@@ -45,7 +46,7 @@ function projectI18nKey(title: string) {
 
           return (
             <article class={`project-feature reveal visible ${hasImages ? '' : 'project-feature--compact'}`}>
-              <div class="project-art">
+              <div class:list={["project-art", { "project-art--gallery": hasImages }]}>
                 {hasImages ? (
                   <>
                     <img
@@ -56,7 +57,7 @@ function projectI18nKey(title: string) {
                       width="900"
                       height="560"
                     />
-                    <div class="project-art-overlay" />
+
                     <div class="project-shots">
                       {project.images?.slice(0, 3).map((image, i) => (
                         <button

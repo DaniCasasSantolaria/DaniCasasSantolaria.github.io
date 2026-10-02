@@ -35,6 +35,8 @@ export const translations = {
       'Game development student based in Barcelona, focused on gameplay programming, interactive systems, and player-first prototypes.',
     'hero.primaryCta': 'View my projects',
     'hero.contact': 'Contact me',
+    'hero.emailChoose': 'Send an email with',
+    'hero.emailDefault': 'Default email app',
     'hero.cv': 'Download CV',
     'hero.print': 'Print Resume',
     'hero.featured': 'Featured Projects',
@@ -82,6 +84,9 @@ export const translations = {
     'projects.viewRepos': 'View repositories',
     'projects.openRepo': 'Open repository',
     'projects.repoGroup': 'Repository group',
+    'projects.echoes.company': "Puzzle-Platformer",
+    'projects.echoes.description':
+      "A 2D puzzle-platformer where levers and buttons control water levels, air currents, and hidden paths. Solve environmental puzzles through logic, timing, and experimentation.",
     'projects.carved.company': 'Group Game Project',
     'projects.carved.description':
       'A group 3D puzzle-platformer project centered on exploration, atmosphere, and gameplay logic.',
@@ -154,6 +159,8 @@ export const translations = {
       'Estudiant de desenvolupament de videojocs a Barcelona, centrat en programació de gameplay, sistemes interactius i prototips pensats per al jugador.',
     'hero.primaryCta': 'Veure projectes',
     'hero.contact': 'Contacta amb mi',
+    'hero.emailChoose': 'Envia un correu amb',
+    'hero.emailDefault': 'Aplicació de correu predeterminada',
     'hero.cv': 'Descarregar CV',
     'hero.print': 'Imprimir currículum',
     'hero.featured': 'Projectes destacats',
@@ -201,6 +208,9 @@ export const translations = {
     'projects.viewRepos': 'Veure repositoris',
     'projects.openRepo': 'Obrir repositori',
     'projects.repoGroup': 'Grup de repositoris',
+    'projects.echoes.company': "Joc de plataformes i trencaclosques",
+    'projects.echoes.description':
+      "Un joc de plataformes i trencaclosques en 2D on les palanques i els botons controlen el nivell de l'aigua, els corrents d'aire i els camins ocults. Resol els trencaclosques de l'entorn amb lògica, precisió i experimentació.",
     'projects.carved.company': 'Projecte de Joc en Grup',
     'projects.carved.description':
       'Projecte grupal de puzles i plataformes 3D centrat en exploració, atmosfera i lògica de gameplay.',
@@ -273,6 +283,8 @@ export const translations = {
       'Estudiante de desarrollo de videojuegos en Barcelona, centrado en programación de gameplay, sistemas interactivos y prototipos pensados para el jugador.',
     'hero.primaryCta': 'Ver mis proyectos',
     'hero.contact': 'Contáctame',
+    'hero.emailChoose': 'Envía un correo con',
+    'hero.emailDefault': 'Aplicación de correo predeterminada',
     'hero.cv': 'Descargar CV',
     'hero.print': 'Imprimir currículum',
     'hero.featured': 'Proyectos destacados',
@@ -320,6 +332,9 @@ export const translations = {
     'projects.viewRepos': 'Ver repositorios',
     'projects.openRepo': 'Abrir repositorio',
     'projects.repoGroup': 'Grupo de repositorios',
+    'projects.echoes.company': "Juego de puzles y plataformas",
+    'projects.echoes.description':
+      "Un juego de puzles y plataformas en 2D donde las palancas y los botones controlan el nivel del agua, las corrientes de aire y los caminos ocultos. Resuelve los puzles del entorno con lógica, precisión y experimentación.",
     'projects.carved.company': 'Proyecto de Juego en Grupo',
     'projects.carved.description':
       'Proyecto grupal de puzles y plataformas 3D centrado en exploración, atmósfera y lógica de gameplay.',

@@ -312,3 +312,22 @@ header.glass-nav .switch .slider::before { background:var(--accent); }
   .scroll-progress span,.editorial-hero .work-image > img,#projects .project-art > img { transition:none!important; }
   .cursor-aura { display:none; }
 }
+
+/* Keep complete screenshots visible and thumbnails below the main image. */
+#projects .project-art--gallery { align-self:center; min-height:0; }
+#projects .project-art--gallery > img,
+#projects .project-feature:hover .project-art--gallery > img {
+  width:100%;
+  height:auto;
+  aspect-ratio:16 / 9;
+  min-height:0;
+  object-fit:contain;
+  background:#000;
+  transform:none;
+  filter:none;
+}
+#projects .project-art--gallery .project-shots {
+  position:static;
+  padding:12px 0 0;
+}
+#projects .project-art--gallery .project-shot-button img { object-fit:contain; background:#000; }

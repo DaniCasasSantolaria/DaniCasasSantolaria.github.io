@@ -6,7 +6,11 @@
     "company": "Group Game Project",
     "category": "gameplay",
     "description": "A group 3D puzzle-platformer project centered on exploration, atmosphere, and gameplay logic.",
-    "tags": ["3D Puzzle-Platforming", "Gameplay Systems", "Atmospheric Exploration"],
+    "tags": [
+      "3D Puzzle-Platforming",
+      "Gameplay Systems",
+      "Atmospheric Exploration"
+    ],
     "icon": "puzzle-piece",
     "sliderImage": "/images/projects/carved/carved-3.png",
     "sliderOrder": 1,
@@ -21,29 +25,20 @@
     "githubRepo": ""
   },
   {
-    "title": "SDL Arcade games",
-    "featured": true,
-    "resume": true,
-    "company": "GitHub Project",
-    "category": "systems",
-    "description": "A software engineering project with arcade-style games built around SDL, focused on C++ fundamentals, structure, and interactive gameplay loops.",
-    "tags": ["SDL", "C++", "Arcade Games"],
-    "icon": "code-bracket-square",
-    "sliderOrder": 2,
-    "link": "https://github.com/DaniCasasSantolaria/EnginyeriaDelSoftware_AA2_SDL",
-    "colorIcon": "/images/icons/devicons/cplusplus-original.svg",
-    "githubRepo": "DaniCasasSantolaria/EnginyeriaDelSoftware_AA2_SDL"
-  },
-  {
     "title": "Networked Games",
     "featured": true,
     "resume": true,
     "company": "GitHub Project",
     "category": "networking",
     "description": "A networked games assignment split across UDP server, UDP client, and TCP server repositories, focused on client-server communication and multiplayer gameplay foundations.",
-    "tags": ["UDP", "TCP", "Client-Server", "Multiplayer"],
+    "tags": [
+      "UDP",
+      "TCP",
+      "Client-Server",
+      "Multiplayer"
+    ],
     "icon": "code-bracket-square",
-    "sliderOrder": 3,
+    "sliderOrder": 2,
     "link": "https://github.com/DaniCasasSantolaria/AA3_JocsEnXarxaUDP_Servidor",
     "colorIcon": "/images/icons/devicons/cplusplus-original.svg",
     "githubRepo": "DaniCasasSantolaria/AA3_JocsEnXarxaUDP_Servidor",
@@ -67,5 +62,48 @@
         "url": "https://github.com/DaniCasasSantolaria/AA3_JocsEnXarxaTCP_Server"
       }
     ]
+  },
+  {
+    "title": "Echoes Of The Abyss",
+    "featured": true,
+    "resume": false,
+    "company": "Puzzle-Platformer",
+    "category": "gameplay",
+    "description": "A 2D puzzle-platformer where levers and buttons control water levels, air currents, and hidden paths. Solve environmental puzzles through logic, timing, and experimentation.",
+    "tags": [
+      "2D Puzzle-Platforming",
+      "Environmental Puzzles",
+      "Level Design"
+    ],
+    "icon": "puzzle-piece",
+    "sliderOrder": 3,
+    "link": "https://dani-casas.itch.io/echoes-of-the-abyss",
+    "colorIcon": "/images/icons/materialdesign/cube-outline.svg",
+    "githubRepo": "",
+    "images": [
+      "/images/projects/echoes-of-the-abyss/echoes-1.png",
+      "/images/projects/echoes-of-the-abyss/echoes-2.png",
+      "/images/projects/echoes-of-the-abyss/echoes-3.png"
+    ],
+    "backgroundImage": "/images/projects/echoes-of-the-abyss/echoes-1.png",
+    "sliderImage": "/images/projects/echoes-of-the-abyss/echoes-1.png"
+  },
+  {
+    "title": "SDL Arcade games",
+    "featured": true,
+    "resume": true,
+    "company": "GitHub Project",
+    "category": "systems",
+    "description": "A software engineering project with arcade-style games built around SDL, focused on C++ fundamentals, structure, and interactive gameplay loops.",
+    "tags": [
+      "SDL",
+      "C++",
+      "Arcade Games"
+    ],
+    "icon": "code-bracket-square",
+    "sliderOrder": 4,
+    "link": "https://github.com/DaniCasasSantolaria/EnginyeriaDelSoftware_AA2_SDL",
+    "colorIcon": "/images/icons/devicons/cplusplus-original.svg",
+    "githubRepo": "DaniCasasSantolaria/EnginyeriaDelSoftware_AA2_SDL"
   }
 ]
