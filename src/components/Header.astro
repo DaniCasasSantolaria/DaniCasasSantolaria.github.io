@@ -898,7 +898,7 @@ const external = siteData.navExternal
   }
 
   const THEME_KEY = document.documentElement.dataset.themeKey || 'portfolio-theme';
-  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+  applyTheme(localStorage.getItem(THEME_KEY) || 'dark');
 
   checkbox.addEventListener('change', () => {
     const next = checkbox.checked ? 'light' : 'dark';

@@ -48,6 +48,12 @@
       "desc": "Professional profile, experience, and updates",
       "personalKey": "linkedin",
       "urlTemplate": "https://linkedin.com/in/{value}"
+    },
+    {
+      "label": "itch.io",
+      "desc": "Games and playable prototypes",
+      "personalKey": "itch",
+      "urlTemplate": "https://{value}.itch.io/"
     }
   ],
   "serviceSites": [

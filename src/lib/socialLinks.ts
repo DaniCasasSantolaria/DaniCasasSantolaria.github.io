@@ -11,6 +11,7 @@ interface SocialConfig {
 // {v} in urlTemplate is replaced with the raw handle value from personal.json at call time.
 const SOCIAL_CONFIG: Record<string, SocialConfig> = {
   github: { label: 'GitHub', urlTemplate: 'https://github.com/{v}', icon: 'simple-icons:github' },
+  itch: { label: 'itch.io', urlTemplate: 'https://{v}.itch.io/', icon: 'simple-icons:itchdotio' },
   linkedin: {
     label: 'LinkedIn',
     urlTemplate: 'https://linkedin.com/in/{v}',
@@ -70,6 +71,7 @@ const SOCIAL_CONFIG: Record<string, SocialConfig> = {
 const DISPLAY_ORDER = [
   'github',
   'linkedin',
+  'itch',
   'gitlab',
   'twitter',
   'instagram',

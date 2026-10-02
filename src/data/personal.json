@@ -9,6 +9,7 @@
   "location": "Barcelona, Catalonia, Spain",
   "linkedin": "daniel-casas-santolaria-5576982b3",
   "github": "DaniCasasSantolaria",
+  "itch": "dani-casas",
   "gitlab": "",
   "facebook": "",
   "youtube": "",
@@ -30,7 +31,7 @@
   "volunteer": "",
   "portfolioUrl": "https://danicasassantolaria.github.io",
   "heroRole": "Gameplay Programmer & Game Developer",
-  "heroSocialLinks": ["github", "linkedin"],
+  "heroSocialLinks": ["github", "linkedin", "itch"],
   "bio": "Game development student based in Barcelona, focused on gameplay programming, interactive systems, and player-first prototypes.",
   "aboutLong": "I am studying video game development at Universitat de Barcelona / ENTI, where I work on playable prototypes, team projects, and practical game design exercises. My focus is the intersection between gameplay code, systems thinking, and readable player feedback: mechanics that are clear, responsive, and fun to iterate on. I am especially interested in gameplay programming, level and puzzle logic, rapid prototyping, and collaborative development with artists and designers."
 }

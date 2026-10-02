@@ -20,7 +20,7 @@ const shareImageUrl = new URL(withBase(personalData.photo), siteUrl).href;
 ---
 
 <!doctype html>
-<html lang="en" data-theme="light" data-theme-key={siteData.themeStorageKey}>
+<html lang="en" data-theme="dark" data-theme-key={siteData.themeStorageKey}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -120,7 +120,7 @@ const shareImageUrl = new URL(withBase(personalData.photo), siteUrl).href;
         try {
           var key = document.documentElement.dataset.themeKey || 'portfolio-theme';
           var t = localStorage.getItem(key);
-          if (t !== 'dark') {
+          if (t === 'light') {
             document.documentElement.setAttribute('data-theme', 'light');
             var m = document.getElementById('meta-theme-color');
             if (m) m.setAttribute('content', '#f5f6f8');
@@ -150,7 +150,7 @@ const shareImageUrl = new URL(withBase(personalData.photo), siteUrl).href;
           document.documentElement.removeAttribute('data-theme');
         });
         window.addEventListener('afterprint', function () {
-          if (savedTheme !== 'dark') {
+          if (savedTheme === 'light') {
             document.documentElement.setAttribute('data-theme', 'light');
           }
           savedTheme = null;
