@@ -13,7 +13,7 @@ import { icons } from '../lib/icons';
     <div class="expertise-grid max-w-6xl mx-auto">
       {
         expertiseData.map((item, i) => (
-          <article class="expertise-card reveal" style={`transition-delay:${i * 0.08}s`}>
+          <article class="expertise-card reveal" style={`--card-order:${i}; --card-accent:${['#8ab8f4', '#9f93ed', '#69cebd', '#e2b77e'][i % 4]}`}>
             <div class="expertise-icon-wrap" aria-hidden="true">
               <svg class="expertise-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" set:html={icons[item.icon] ?? icons.sparkles} />
             </div>

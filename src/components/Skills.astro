@@ -15,7 +15,7 @@ import { withBase } from '../lib/assetPath';
     <div class="skills-shell max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
       {
         skillsData.map((category, ci) => (
-          <div class="skills-card card reveal" style={`--category-index: ${ci}; transition-delay: ${ci * 0.1}s;`}>
+          <div class="skills-card card reveal" style={`--category-index: ${ci}; --skill-accent: ${['#8ab8f4', '#9f93ed', '#69cebd', '#e2b77e'][ci % 4]};`}>
             <div class="skills-card-header">
               <span class="skills-kicker">0{ci + 1}</span>
               <h3 data-i18n={`skills.${category.title.toLowerCase().replaceAll(' & ', '-').replaceAll(' ', '-')}`}>{category.title}</h3>
