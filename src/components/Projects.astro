@@ -13,6 +13,7 @@ const projects = projectsData as Array<(typeof projectsData)[number] & {
 }>;
 
 function projectI18nKey(title: string) {
+  if (title === 'Linfo Invaders') return 'linfo';
   if (title === 'Echoes Of The Abyss') return 'echoes';
   if (title === 'Carved') return 'carved';
   if (title === 'SDL Arcade games') return 'sdl';

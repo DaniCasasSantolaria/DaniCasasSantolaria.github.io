@@ -92,6 +92,9 @@ export const translations = {
     'projects.carved.description':
       'A group 3D puzzle-platformer project centered on exploration, atmosphere, and gameplay logic.',
     'projects.sdl.company': 'GitHub Project',
+    'projects.linfo.company': 'Cancer Awareness Project',
+    'projects.linfo.description':
+      'An educational game developed in collaboration with the Josep Carreras Leukaemia Foundation to raise awareness of blood cancers, particularly lymphomas. Built with Unity and inspired by Space Invaders, it turns concepts related to tumor cells and their treatment into an accessible arcade experience.',
     'projects.sdl.description':
       'A software engineering project with arcade-style games built around SDL, focused on C++ fundamentals, structure, and interactive gameplay loops.',
     'projects.network.company': 'GitHub Project',
@@ -217,6 +220,9 @@ export const translations = {
     'projects.carved.description':
       'Projecte grupal de puzles i plataformes 3D centrat en exploració, atmosfera i lògica de gameplay.',
     'projects.sdl.company': 'Projecte de GitHub',
+    'projects.linfo.company': 'Projecte de conscienciació sobre el càncer',
+    'projects.linfo.description':
+      'Videojoc divulgatiu desenvolupat en col·laboració amb la Fundació Josep Carreras contra la leucèmia per conscienciar sobre els càncers de la sang, especialment els limfomes. Creat amb Unity i inspirat en Space Invaders, transforma conceptes relacionats amb les cèl·lules tumorals i el seu tractament en una experiència arcade accessible.',
     'projects.sdl.description':
       'Projecte d’enginyeria del software amb jocs arcade fets amb SDL, centrat en fonaments de C++, estructura i bucles de joc interactius.',
     'projects.network.company': 'Projecte de GitHub',
@@ -342,6 +348,9 @@ export const translations = {
     'projects.carved.description':
       'Proyecto grupal de puzles y plataformas 3D centrado en exploración, atmósfera y lógica de gameplay.',
     'projects.sdl.company': 'Proyecto de GitHub',
+    'projects.linfo.company': 'Proyecto de concienciación sobre el cáncer',
+    'projects.linfo.description':
+      'Videojuego divulgativo desarrollado en colaboración con la Fundación Josep Carreras contra la leucemia para concienciar sobre los cánceres de la sangre, especialmente los linfomas. Creado con Unity e inspirado en Space Invaders, transforma conceptos relacionados con las células tumorales y su tratamiento en una experiencia arcade accesible.',
     'projects.sdl.description':
       'Proyecto de ingeniería del software con juegos arcade hechos con SDL, centrado en fundamentos de C++, estructura y bucles de juego interactivos.',
     'projects.network.company': 'Proyecto de GitHub',
