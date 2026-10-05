@@ -64,6 +64,27 @@
     ]
   },
   {
+    "title": "Linfo Invaders",
+    "featured": true,
+    "resume": false,
+    "company": "Cancer Awareness Project",
+    "category": "gameplay",
+    "description": "An educational game developed in collaboration with the Josep Carreras Leukaemia Foundation to raise awareness of blood cancers, particularly lymphomas. Built with Unity and inspired by Space Invaders, it turns concepts related to tumor cells and their treatment into an accessible arcade experience.",
+    "tags": ["Unity", "2D Arcade Shooter", "Game Design", "Shaders"],
+    "icon": "code-bracket-square",
+    "sliderOrder": 3,
+    "link": "https://dani-casas.itch.io/linfo",
+    "colorIcon": "/images/icons/materialdesign/cube-outline.svg",
+    "githubRepo": "",
+    "images": [
+      "/images/projects/linfo-invaders/linfo-1.png",
+      "/images/projects/linfo-invaders/linfo-2.png",
+      "/images/projects/linfo-invaders/linfo-3.png"
+    ],
+    "backgroundImage": "/images/projects/linfo-invaders/linfo-1.png",
+    "sliderImage": "/images/projects/linfo-invaders/linfo-1.png"
+  },
+  {
     "title": "Echoes Of The Abyss",
     "featured": true,
     "resume": false,
@@ -76,7 +97,7 @@
       "Level Design"
     ],
     "icon": "puzzle-piece",
-    "sliderOrder": 3,
+    "sliderOrder": 4,
     "link": "https://dani-casas.itch.io/echoes-of-the-abyss",
     "colorIcon": "/images/icons/materialdesign/cube-outline.svg",
     "githubRepo": "",
@@ -87,27 +108,6 @@
     ],
     "backgroundImage": "/images/projects/echoes-of-the-abyss/echoes-1.png",
     "sliderImage": "/images/projects/echoes-of-the-abyss/echoes-1.png"
-  },
-  {
-    "title": "Linfo Invaders",
-    "featured": true,
-    "resume": false,
-    "company": "Cancer Awareness Project",
-    "category": "gameplay",
-    "description": "An educational game developed in collaboration with the Josep Carreras Leukaemia Foundation to raise awareness of blood cancers, particularly lymphomas. Built with Unity and inspired by Space Invaders, it turns concepts related to tumor cells and their treatment into an accessible arcade experience.",
-    "tags": ["Unity", "2D Arcade Shooter", "Game Design", "Shaders"],
-    "icon": "code-bracket-square",
-    "sliderOrder": 4,
-    "link": "https://dani-casas.itch.io/linfo",
-    "colorIcon": "/images/icons/materialdesign/cube-outline.svg",
-    "githubRepo": "",
-    "images": [
-      "/images/projects/linfo-invaders/linfo-1.png",
-      "/images/projects/linfo-invaders/linfo-2.png",
-      "/images/projects/linfo-invaders/linfo-3.png"
-    ],
-    "backgroundImage": "/images/projects/linfo-invaders/linfo-1.png",
-    "sliderImage": "/images/projects/linfo-invaders/linfo-1.png"
   },
   {
     "title": "SDL Arcade games",
